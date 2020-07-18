@@ -1,0 +1,23 @@
+.superFancyBlockquote {
+    font-weight: 100;
+    font-family: 'Cabin', sans-serif;
+    font-size: 2rem;
+    line-height: 1.25;
+    /*margin-top: 3rem;*/
+}
+
+.insightNotes {
+    font-weight: 100;
+    font-family: 'Cabin', sans-serif;
+    font-size: 1.25rem;
+
+}
+
+.insightCaption {
+    font-weight: 100;
+    font-family: 'Cabin', sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.25;
+    color: #2d3748
+}
+
