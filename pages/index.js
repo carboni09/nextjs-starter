@@ -12,26 +12,9 @@ const Home = (props) => {
 	return (
 		<div >
 
-
-
-
-
-			<h1 className="text-xxxl font-bold">Direction</h1>
-
-
-
-
-
-
-
-
-
-
-
 		</div>
 
 	);
 };
-
 
 export default Home
