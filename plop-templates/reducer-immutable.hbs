@@ -1,0 +1,23 @@
+import { } from '../actions/types';
+import { produce } from 'immer'
+
+const INITIAL_STATE = {
+    
+};
+
+export default (state = INITIAL_STATE, action) => {
+    return produce(state, draft => {
+        switch (action.type) {
+            /*
+            case STORE_ADDRESSES:
+                draft.addresses = action.payload
+                return draft
+            */
+
+        
+            default:
+                draft;
+        }
+    })
+
+};

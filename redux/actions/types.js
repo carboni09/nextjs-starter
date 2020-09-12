@@ -21,3 +21,5 @@ export const SET_TOAST_MESSAGE = 'set_toast_message'
 export const CLEAR_TOAST_MESSAGE = 'clear_toast_message'
 export const SHOW_TOAST = 'show_toast'
 export const HIDE_TOAST = 'hide_toast'
+
+//ADD NEW ACTION TYPES//

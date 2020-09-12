@@ -1,14 +1,14 @@
 import { createStore, applyMiddleware } from 'redux';
 import ReduxThunk from 'redux-thunk';
-import reducers from './src/redux/reducers';
+import reducers from './redux/reducers';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
 const persistConfig = {
-	key: 'primary',
-	storage,
-	whitelist: ['auth']
+    key: 'primary',
+    storage,
+    whitelist: ['auth']
 };
 
 const initialState = {};
@@ -16,7 +16,7 @@ const initialState = {};
 const persistedReducer = persistReducer(persistConfig, reducers);
 
 export const initializeStore = (preloadedState = initialState) => {
-	return createStore(persistedReducer, preloadedState, composeWithDevTools(applyMiddleware(ReduxThunk)));
+    return createStore(persistedReducer, preloadedState, composeWithDevTools(applyMiddleware(ReduxThunk)));
 };
 
 /*

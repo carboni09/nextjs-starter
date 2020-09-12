@@ -1,19 +1,15 @@
 import Navbar from './NavBar';
-
 import SideMenu from './SideMenu';
-
 import MainLayout from './MainLayout';
-
-//import Modal from './Modal'
+//IMPORT ITEMS HERE//
+import MyComp from './MyComp'
 
 
 export {
 	Navbar,
 	MainLayout,
 	SideMenu,
-
-	//Modal,
-
-
+	//EXPORT ITEMS HERE//
+	MyComp
 
 };
