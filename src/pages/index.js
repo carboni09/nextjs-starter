@@ -1,9 +1,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { useRouter, withRouter } from 'next/router'
-import { Tabs } from '../components'
-//import { compose } from 'redux'
-//import { redirectIfAuth } from '../lib/auth'
+import { Tabs, Button } from '../components'
 
 
 
@@ -12,7 +10,7 @@ import { Tabs } from '../components'
 const Home = (props) => {
 	return (
 		<div >
-			<Tabs />
+
 
 		</div>
 

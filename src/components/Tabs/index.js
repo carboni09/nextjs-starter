@@ -21,8 +21,8 @@ const ActiveLink = ({ children, href, className }) => {
 
 const Tabs = ({ children }) => {
     return (
-        <div className={`" max-w-xl mx-auto px-8"`}>
-            <h1 className="text-2xl text-gray-900 font-semibold">Tabzilla</h1>
+        <div className={`${styles.container} max-w-xl mx-auto px-8`}>
+            <h1 className="text-2xl text-gray-900 font-semibold">Tabs</h1>
 
             <div
                 className="mt-6 flex overflow-x-auto scrollbar-none"

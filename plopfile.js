@@ -12,31 +12,57 @@ module.exports = (plop) => {
                 name: 'addToIndex',
                 message: 'Would you like to add component to index?',
                 choices: ['Yes', 'No'],
-                value: 'No'
+                value: 'Yes'
+            },
+            {
+                type: 'list',
+                name: 'withStyle',
+                message: 'Would you like to create component stylesheet',
+                choices: ['Yes', 'No'],
+                value: 'Yes'
             }
         ],
         actions: (data) => {
             let actions = []
 
             if (data.name) {
+                //create file
                 actions.push({
                     type: 'add',
-                    path: 'components/{{pascalCase name}}.js',
+                    path: 'src/components/{{pascalCase name}}/index.js',
                     templateFile: 'plop-templates/component.hbs'
+                })
+            }
+            if (data.withStyle) {
+                //create stylesheet
+                actions.push({
+                    type: 'add',
+                    path: 'src/components/{{pascalCase name}}/{{pascalCase name}}.module.css',
+                    templateFile: 'plop-templates/component-style.hbs'
+                })
+                //import styles into component
+                actions.push({
+                    type: 'append',
+                    path: 'src/components/{{pascalCase name}}/index.js',
+                    pattern: '//IMPORT ITEMS HERE//',
+                    template: `import styles from './{{pascalCase name}}.module.css';`
+
                 })
             }
 
             if (data.addToIndex === 'Yes') {
+                //import file in index file
                 actions.push({
                     type: 'append',
-                    path: 'components/index.js',
+                    path: 'src/components/index.js',
                     pattern: '//IMPORT ITEMS HERE//',
-                    template: `import {{pascalCase name}} from './{{pascalCase name}};'`
+                    template: `import {{pascalCase name}} from './{{pascalCase name}}';`
 
                 })
+                //export file from index file
                 actions.push({
                     type: 'append',
-                    path: 'components/index.js',
+                    path: 'src/components/index.js',
                     pattern: '//EXPORT ITEMS HERE//',
                     template: '{{pascalCase name}},'
 
@@ -112,7 +138,7 @@ module.exports = (plop) => {
                     type: 'append',
                     path: 'redux/reducers/index.js',
                     pattern: '//IMPORT ITEMS HERE//',
-                    template: `import {{pascalCase name}}Reducer from './{{pascalCase name}}Reducer;'`
+                    template: `import {{pascalCase name}}Reducer from './{{pascalCase name}}Reducer';`
 
                 })
                 actions.push({
