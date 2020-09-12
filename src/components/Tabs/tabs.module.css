@@ -1,0 +1,9 @@
+.container {
+    @apply bg-red-400
+}
+
+@screen xl {
+    .container {
+        @apply bg-purple-400
+    }
+}

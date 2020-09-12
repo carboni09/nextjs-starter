@@ -4,7 +4,15 @@
 
 @tailwind components;
 /* purgecss end ignore */
+
+@font-face {
+  font-family: 'Cabin-Regular';
+  src: local('Cabin-Regular'), url(../assets/fonts/Cabin-Regular.ttf) format('ttf');
+}
+
 @tailwind utilities;
+
+
 
 
 

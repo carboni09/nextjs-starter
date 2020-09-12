@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import styles from './tabs.module.css'
 
 const ActiveLink = ({ children, href, className }) => {
     const router = useRouter();
     return (
         <Link href={href} scroll={false}>
             <a
-                className={`${
+                className={` ${
                     router.pathname === href
                         ? "text-gray-900 border-gray-800"
                         : "text-gray-600 hover:text-gray-700 border-transparent"
@@ -20,8 +21,8 @@ const ActiveLink = ({ children, href, className }) => {
 
 const Tabs = ({ children }) => {
     return (
-        <div className="max-w-xl mx-auto px-8">
-            <h1 className="text-2xl text-gray-900 font-semibold">Tabs</h1>
+        <div className={`" max-w-xl mx-auto px-8"`}>
+            <h1 className="text-2xl text-gray-900 font-semibold">Tabzilla</h1>
 
             <div
                 className="mt-6 flex overflow-x-auto scrollbar-none"

@@ -1,15 +1,10 @@
 module.exports = {
 	theme: {
-		fontFamily: {
-			body: ['Roboto', 'sans-serif'],
-			display: ['IBM Plex Sans', 'sans-serif']
-		},
-
 		extend: {
 			fontFamily: {
-
-				heading: ['IBM Plex Sans', 'sans-serif']
+				'sans': ['Cabin-Regular', 'sans-serif']
 			},
+
 			height: {
 				'72': '18rem',
 				'84': '21rem',

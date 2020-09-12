@@ -7,7 +7,7 @@ class MyDocument extends Document {
         return (
             <Html>
                 <Head>
-                    <script src="https://checkout.flutterwave.com/v3.js"></script>
+
                 </Head>
                 <body>
                     <Main />
